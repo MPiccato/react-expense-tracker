@@ -1,10 +1,12 @@
 import { useContext, createContext, useReducer } from "react";
 import AppReducer from "./AppReducer";
-export const Context = createContext();
 
 const initialState = {
-    transactions: [],
+    transactions: []
 }
+export const Context = createContext(initialState);
+
+
 
 export const useGlobalState = () => {
     const context = useContext(Context)
